@@ -1,0 +1,158 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Almost-White: hsl(214, 17%, 92%);
+    --Light-Grey: hsl(0, 0%, 81%);
+    --Grey: hsl(224, 10%, 45%);
+    --Dark-Grey: hsl(217, 19%, 35%);
+    --Dark-Blue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+    --Light-Purple: hsl(260, 100%, 95%);
+    --Purple: hsl(264, 82%, 80%);
+    --Dark-Purple: hsl(263, 55%, 52%);
+}
+
+body {
+    background-color: var(--Almost-White);
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+
+.flex-center {
+    display: grid;
+    place-content: center;
+}
+
+#view-port-flex {
+    height: 100vh;
+}
+
+.employee-photo {
+    border-radius: 50%;
+    border: solid 2px var(--Purple);
+    width: 40px;
+    height: 40px;
+}
+
+#quotation-svg {
+    position: absolute;
+    right: 3.7rem;
+    top: 0.2rem;
+    height: 7.9rem;
+    width: auto;
+}
+
+.employee-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-rows:  repeat(2 ,1fr);
+    height: 50rem;
+    width: 90rem;
+    gap: 1.9rem;
+}
+
+.employee-card {
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.employee-card h1{
+    font-size: 1.15em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.employee-card h2{
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.employee-card p1{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.employee-card p2{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#daniel-clifford {
+    background-color: var(--Dark-Purple);
+    grid-column: span 2;
+    color: var(--White);
+}
+
+#daniel-clifford h1, h2, p1, p2 {
+    position: relative;
+    z-index: 2;
+}
+
+
+#jonathan-walters {
+    background-color: var(--Dark-Grey);
+    color: var(--White);
+
+}
+
+
+
+#jeanette-harmon {
+    background-color: var(--White);
+    color: var(--Dark-Grey);
+
+
+}
+
+#patrick-abrams {
+    background-color: var(--Dark-Blue);
+    grid-column: span 2;
+    color: var(--Light-Grey);
+
+
+}
+
+#kira-whittle {
+    background-color: var(--White);
+    grid-row:  span 2;
+    color: var(--Dark-Grey);
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px
+}
+
+@media (max-width: 1000px) {
+    .employee-cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: 100vh; 
+        width: 90%;
+        margin: 2rem auto;
+        gap: 3rem; 
+    }
+
+
+    #daniel-clifford,
+    #patrick-abrams {
+        grid-column: span 1;
+    }
+
+    .employee-card p1{
+    font-size: 1.6em;
+    }
+
+    .employee-card p2{
+    font-size: 1.1em;
+    }
+
+    #kira-whittle {
+        grid-row: span 1;
+        grid-column: span 1;  
+    }
+}
